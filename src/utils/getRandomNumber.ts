@@ -1,5 +1,5 @@
-const getRandomNumber = (limit: number) => {
-	return Math.floor(Math.random() * limit);
-};
+function getRandomNumber(max: number): number {
+	return Math.floor(Math.random() * max);
+}
 
 export default getRandomNumber;
