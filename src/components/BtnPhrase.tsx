@@ -1,16 +1,20 @@
 import type { Phrase as PhraseType } from '../App';
 import getRandomNumber from '../utils/getrandomNumber';
 import quotes from '../data/phrases.json';
-
+import photos from '../data/photos.json';
 interface BtnPhraseProps {
 	setPhraseSelected: React.Dispatch<React.SetStateAction<PhraseType>>;
+	setBgSelected: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const BtnPhrase = ({ setPhraseSelected }: BtnPhraseProps) => {
+const BtnPhrase = ({ setPhraseSelected, setBgSelected }: BtnPhraseProps) => {
 	const changePhrase = (): void => {
-		const randomIndex = getRandomNumber(quotes.length);
-		const phraseRandom = quotes[randomIndex];
-		setPhraseSelected(phraseRandom);
+		const randomIndexQuote = getRandomNumber(quotes.length);
+		const phraseRandomQuote = quotes[randomIndexQuote];
+		const randomIndexBg = getRandomNumber(photos.length);
+		const bgRandom = photos[randomIndexBg];
+		setPhraseSelected(phraseRandomQuote);
+		setBgSelected(bgRandom);
 	};
 
 	return (

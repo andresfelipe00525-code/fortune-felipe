@@ -24,7 +24,7 @@ function App() {
 	);
 
 	const objStyles = {
-		backgroundImage: `url(/img/fondo${bgSelected}.png)`,
+		backgroundImage: `url(/img/Fondo${bgSelected}.png)`,
 	};
 
 	return (
@@ -33,12 +33,14 @@ function App() {
 			className="relative min-h-screen flex flex-col items-center justify-center bg-slate-600 px-4 bg-center bg-no-repeat"
 		>
 			<h1 className="stroke absolute top-10 text-3xl uppercase font-bold text-center text-white drop-shadow-lg bg-cover">
-				Fortune Cookie 🍪
+				Fortune Felipe🍪
 			</h1>
 
 			<Phrase phraseSelected={phraseSelected} />
-
-			<BtnPhrase setPhraseSelected={setPhraseSelected} />
+			<BtnPhrase
+				setPhraseSelected={setPhraseSelected}
+				setBgSelected={setBgSelected}
+			/>
 		</main>
 	);
 }
